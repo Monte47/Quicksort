@@ -36,11 +36,11 @@ class QuickSort
 
     ((start+1)...(start+length)).each do |i|
 
-      val = array[i]
-      if prc.call(array[pivot], val) >= 1
+      temp = array[i]
+      if prc.call(array[pivot], temp) >= 1
         array[i] = array[pivot + 1]
         array[pivot + 1] = array[pivot]
-        array[pivot] = val
+        array[pivot] = temp
         pivot += 1
       end
 
